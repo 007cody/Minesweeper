@@ -61,8 +61,13 @@ public boolean isWon() {
 }
 
 public void displayLosingMessage() {
-	textSize(100);
-	text("You Lose!", 200, 200); 
+	String arr = {"Y", "o", "u", " ", "L", "o", "s", "t", "!"};
+
+	for (int i = 0; i < mines.size(); i++) {
+		mines.get(i).revealMine();
+	}
+	
+	noLoop();
 }
 
 public void displayWinningMessage() {
